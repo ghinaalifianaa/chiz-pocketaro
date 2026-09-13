@@ -14,7 +14,7 @@ export default function CeritaKami() {
           Bahan Lokal yang Selama Ini Terlewat
         </h2>
         <img
-          src="/chiz-pocketaro-utuh.png"
+          src="/isian-garlic-butter-corn.png"
           alt="Chiz-Pocketaro"
           className="border-2 border-ink rounded-3xl rotate-1 w-full aspect-square object-cover mb-6"
         />
@@ -35,7 +35,7 @@ export default function CeritaKami() {
       {/* Layout desktop: foto kiri, teks kanan */}
       <div className="relative z-10 max-w-4xl mx-auto hidden md:grid md:grid-cols-2 gap-10 items-center">
         <img
-          src="/chiz-pocketaro-utuh.png"
+          src="/isian-garlic-butter-corn.png"
           alt="Chiz-Pocketaro"
           className="border-2 border-ink rounded-3xl rotate-1 w-full aspect-square object-cover"
         />
