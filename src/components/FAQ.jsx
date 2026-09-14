@@ -7,7 +7,7 @@ const faqList = [
   },
   {
     q: "Apakah Chiz-Pocketaro mengandung alergen tertentu?",
-    a: "Meski Chiz-Pocketaro bebas gluten, ada beberapa alergen lain yang perlu diperhatikan. Semua varian mengandung susu (dari lelehan keju), begitu juga saus Creamy Ranch yang berbahan dasar susu. Varian Hot Sauce mengandung telur, sementara isian Jamur & Tempe mengandung kedelai. Kalau kamu punya alergi tertentu, jangan ragu untuk tanya dulu ke kami sebelum memesan. Pilih langsung di form pesanan di atas.",
+    a: "Meski Chiz-Pocketaro bebas gluten, ada beberapa alergen lain yang perlu diperhatikan. Semua varian mengandung susu (dari lelehan keju), begitu juga saus Creamy Ranch yang berbahan dasar susu. Varian Hot Sauce mengandung telur, sementara isian Jamur & Tempe mengandung kedelai. Kalau kamu punya alergi tertentu, jangan ragu untuk tanya dulu ke kami sebelum memesan.",
   },
   {
     q: "Bisa pesan beberapa rasa atau saus sekaligus?",
