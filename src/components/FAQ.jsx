@@ -6,8 +6,8 @@ const faqList = [
     a: "Isi form di atas, lalu pesananmu otomatis terkirim sebagai pesan WhatsApp ke admin. Admin akan konfirmasi ketersediaan dan detail pembayaran.",
   },
   {
-    q: "Bisa pilih isian dan saus apa saja?",
-    a: "Ada 3 pilihan isian (Savory Chicken, Garlic Butter Corn, Tumis Jamur & Tempe) dan 2 pilihan saus (Creamy Ranch Sauce, Hot Sauce). Pilih langsung di form pesanan di atas.",
+    q: "Apakah Chiz-Pocketaro mengandung alergen tertentu?",
+    a: "Meski Chiz-Pocketaro bebas gluten, ada beberapa alergen lain yang perlu diperhatikan. Semua varian mengandung susu (dari lelehan keju), begitu juga saus Creamy Ranch yang berbahan dasar susu. Saus Basic Hot Sauce mengandung telur, sementara isian Tempe & Jamur Kancing mengandung kedelai. Kalau kamu punya alergi tertentu, jangan ragu untuk tanya dulu ke kami sebelum memesan. Pilih langsung di form pesanan di atas.",
   },
   {
     q: "Bisa pesan beberapa rasa atau saus sekaligus?",
