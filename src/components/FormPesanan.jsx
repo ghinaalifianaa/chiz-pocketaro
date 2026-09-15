@@ -240,24 +240,42 @@ export default function FormPesanan() {
         </button>
 
         <div>
-          <label className="block text-sm font-bold mb-1">Metode</label>
-          <select
-            value={metode}
-            onChange={(e) => setMetode(e.target.value)}
-            className={inputClass}
-          >
-            <option value="ambil">Ambil langsung</option>
-            <option value="antar">Diantar</option>
-          </select>
+          <label className="block text-sm font-bold mb-2">Metode</label>
+          <div className="grid grid-cols-2 gap-3">
+            <button
+              type="button"
+              onClick={() => setMetode("ambil")}
+              className={`py-2.5 rounded-xl border-2 font-bold text-sm transition-colors ${
+                metode === "ambil"
+                  ? "bg-brand text-white border-ink"
+                  : "bg-white text-stone-500 border-stone-300"
+              }`}
+            >
+              Ambil langsung
+            </button>
+            <button
+              type="button"
+              onClick={() => setMetode("antar")}
+              className={`py-2.5 rounded-xl border-2 font-bold text-sm transition-colors ${
+                metode === "antar"
+                  ? "bg-brand text-white border-ink"
+                  : "bg-white text-stone-500 border-stone-300"
+              }`}
+            >
+              Diantar
+            </button>
+          </div>
           {metode === "antar" && (
-            <p className="text-xs text-stone-500 mt-1">
+            <p className="text-xs text-stone-500 mt-2">
               Gratis ongkir di area UGM. Di luar area UGM, tambahan Rp1.000/km.
             </p>
           )}
         </div>
         {metode === "ambil" && (
-          <div>
-            <label className="block text-sm font-bold mb-1">Lokasi ambil</label>
+          <div className="bg-purple-tint border-2 border-brand rounded-xl p-3">
+            <label className="block text-sm font-bold mb-1">
+              ↳ Lokasi ambil
+            </label>
             <select
               value={lokasiAmbil}
               onChange={(e) => setLokasiAmbil(e.target.value)}
@@ -272,8 +290,8 @@ export default function FormPesanan() {
           </div>
         )}
         {metode === "antar" && (
-          <div>
-            <label className="block text-sm font-bold mb-1">Alamat</label>
+          <div className="bg-purple-tint border-2 border-brand rounded-xl p-3">
+            <label className="block text-sm font-bold mb-1">↳ Alamat</label>
             <textarea
               required
               value={alamat}

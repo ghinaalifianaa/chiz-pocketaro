@@ -4,6 +4,7 @@ import Keunggulan from "./components/Keunggulan.jsx";
 import Bahan from "./components/Bahan.jsx";
 import Proses from "./components/Proses.jsx";
 import Produk from "./components/Produk.jsx";
+import CaraPesan from "./components/CaraPesan.jsx";
 import FAQ from "./components/FAQ.jsx";
 import FormPesanan from "./components/FormPesanan.jsx";
 import Kontak from "./components/Kontak.jsx";
@@ -20,6 +21,7 @@ export default function App() {
       <Bahan />
       <Proses />
       <Produk />
+      <CaraPesan />
       <FormPesanan />
       <FAQ />
       <Kontak />

@@ -10,6 +10,7 @@ const navLinks = [
   { href: "#bahan", label: "Bahan" },
   { href: "#proses", label: "Proses" },
   { href: "#produk", label: "Harga" },
+  { href: "#cara-pesan", label: "Cara Pesan" },
 ];
 
 export default function Footer() {
