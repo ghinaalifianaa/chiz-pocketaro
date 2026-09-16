@@ -1,11 +1,13 @@
 import BackgroundDecor from "./BackgroundDecor.jsx";
 import Navbar from "./Navbar.jsx";
+import StatusPO from "./StatusPO.jsx";
 
 export default function Hero() {
   return (
     <section id="beranda" className="relative pb-24 overflow-hidden">
       <BackgroundDecor variant="hero" />
       <div className="relative z-10">
+        <StatusPO />
         <Navbar />
         <div className="px-6 pt-12 max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
@@ -18,7 +20,7 @@ export default function Hero() {
               camilan talas isi keju
             </h1>
             <p className="text-stone-600 mb-8 max-w-sm">
-              Camilan talas dengan keju leleh dan isian gurih pilihanmu,
+              Patty talas dengan keju leleh dan isian gurih pilihanmu,
               disajikan hangat dengan saus cocolan.
             </p>
             <a

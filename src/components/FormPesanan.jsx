@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { PO_STATUS, PO_MULAI, PO_SELESAI } from "./StatusPO.jsx";
 
 const NOMOR_WA = "6285796753396"; // nomor WhatsApp Chiz-Pocketaro
 
@@ -147,11 +148,31 @@ export default function FormPesanan() {
     window.open(buatLinkWhatsApp(), "_blank");
   }
 
+  if (PO_STATUS !== "open") {
+    return (
+      <section id="pesan" className="px-6 py-20 max-w-md mx-auto text-center">
+        <h2 className="font-display font-extrabold uppercase text-3xl text-brand-dark mb-4">
+          PO Sedang Ditutup
+        </h2>
+        <div className="bg-white border-2 border-ink rounded-2xl p-6">
+          <p className="text-stone-600">
+            Pemesanan sementara ditutup. Pantau Instagram{" "}
+            <strong>@chiz.pocketaro</strong> untuk info pembukaan PO
+            berikutnya!
+          </p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section id="pesan" className="px-6 py-20 max-w-md mx-auto">
-      <h2 className="font-display font-extrabold uppercase text-3xl text-brand-dark mb-2 text-center">
+      <h2 className="font-display font-extrabold uppercase text-3xl text-brand-dark mb-1 text-center">
         Pesan Sekarang
       </h2>
+      <p className="text-brand font-bold text-sm text-center mb-2">
+        PO Dibuka: {PO_MULAI} - {PO_SELESAI}
+      </p>
       <p className="text-stone-600 text-sm text-center mb-8">
         Mau pesan beberapa rasa atau saus sekaligus? Tambah pilihan di bawah.
       </p>
