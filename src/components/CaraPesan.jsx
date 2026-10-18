@@ -24,7 +24,7 @@ const langkah = [
   {
     judul: "Bayar dan tunggu pesanan",
     deskripsi:
-      "Setelah pembayaran dikonfirmasi, ambil di lokasi pilihan (FTP/FEB UGM) atau tunggu diantar.",
+      "Setelah pembayaran dikonfirmasi, ambil di lokasi pilihan (FTP, FEB, FAPERTA, atau SV Barat UGM) atau tunggu diantar.",
   },
 ];
 

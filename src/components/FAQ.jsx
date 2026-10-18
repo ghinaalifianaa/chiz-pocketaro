@@ -6,8 +6,8 @@ const faqList = [
     a: "Isi form di atas, lalu pesananmu otomatis terkirim sebagai pesan WhatsApp ke admin. Admin akan konfirmasi ketersediaan dan detail pembayaran.",
   },
   {
-    q: "Apakah Chiz-Pocketaro mengandung alergen tertentu?",
-    a: "Meski Chiz-Pocketaro bebas gluten, ada beberapa alergen lain yang perlu diperhatikan. Semua varian mengandung susu (dari lelehan keju), begitu juga saus Creamy Ranch yang berbahan dasar susu. Varian Hot Sauce mengandung telur, sementara isian Jamur & Tempe mengandung kedelai. Kalau kamu punya alergi tertentu, jangan ragu untuk tanya dulu ke kami sebelum memesan.",
+    q: "Bisa pilih isian dan saus apa saja?",
+    a: "Ada 4 pilihan isian (Original/keju saja, Savory Chicken, Garlic Butter Corn, Tumis Jamur & Tempe) dan 2 pilihan saus (Creamy Ranch Sauce, Hot Sauce). Pilih langsung di form pesanan di atas.",
   },
   {
     q: "Bisa pesan beberapa rasa atau saus sekaligus?",
@@ -16,6 +16,10 @@ const faqList = [
   {
     q: "Kalau pilih diantar, kena ongkir?",
     a: "Pengiriman di area UGM gratis ongkir. Untuk lokasi di luar area UGM, dikenakan biaya tambahan Rp1.000 per km.",
+  },
+  {
+    q: "Ada kandungan alergen yang perlu diperhatikan?",
+    a: "Ada. Keju leleh (di semua isian) dan Garlic Butter Corn mengandung susu/dairy. Creamy Ranch Sauce dan Hot Sauce mengandung telur. Tumis Jamur & Tempe mengandung kedelai. Kalau kamu punya alergi tertentu, sebutkan saat chat WhatsApp ya.",
   },
 ];
 

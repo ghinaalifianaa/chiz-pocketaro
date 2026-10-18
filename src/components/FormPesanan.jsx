@@ -5,6 +5,7 @@ const NOMOR_WA = "6285796753396"; // nomor WhatsApp Chiz-Pocketaro
 
 // Tinggal tambah/ubah baris di sini kalau mau ubah pilihan isian atau saus
 const ISIAN_OPTIONS = [
+  { value: "original", label: "Original (Keju)" },
   { value: "ayam", label: "Savory Chicken" },
   { value: "jagung", label: "Garlic Butter Corn" },
   { value: "tempe", label: "Tumis Jamur & Tempe" },
@@ -18,6 +19,8 @@ const SAUS_OPTIONS = [
 const LOKASI_AMBIL_OPTIONS = [
   { value: "ftp", label: "FTP UGM" },
   { value: "feb", label: "FEB UGM" },
+  { value: "faperta", label: "FAPERTA UGM" },
+  { value: "svbarat", label: "SV Barat UGM" },
 ];
 
 const HARGA_SATUAN = 10000; // harga per pcs, ganti kalau harga berubah

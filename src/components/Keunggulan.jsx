@@ -19,7 +19,7 @@ const keunggulan = [
   },
   {
     judul: "Accessible Value",
-    deskripsi: "Mudah dijangkau lewat penjualan on-site dan Pre-Order, dengan harga sesuai target mahasiswa.",
+    deskripsi: "Mudah dijangkau lewat penjualan Pre-Order, dengan harga sesuai target mahasiswa.",
   },
 ];
 

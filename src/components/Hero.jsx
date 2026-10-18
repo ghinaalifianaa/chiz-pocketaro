@@ -20,7 +20,7 @@ export default function Hero() {
               camilan talas isi keju
             </h1>
             <p className="text-stone-600 mb-8 max-w-sm">
-              Patty talas dengan keju leleh dan isian gurih pilihanmu,
+              Camilan talas dengan keju leleh dan isian gurih pilihanmu,
               disajikan hangat dengan saus cocolan.
             </p>
             <a

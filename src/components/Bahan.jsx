@@ -1,21 +1,22 @@
 import BackgroundDecor from "./BackgroundDecor.jsx";
 
 const bahanDasar = [
-  { nama: "Talas", deskripsi: "Bahan utama, dikukus dan dihaluskan." },
-  { nama: "MOCAF", deskripsi: "Tepung singkong bebas gluten, bikin tekstur adonan lebih kalis." },
+  { nama: "Talas", deskripsi: "Bahan utama patty, dikukus dan dihaluskan." },
+  { nama: "Tepung MOCAF", deskripsi: "Tepung singkong bebas gluten, bikin tekstur adonan lebih kalis." },
   { nama: "Tapioka", deskripsi: "Menambah kekenyalan pada adonan talas." },
   { nama: "Keju leleh", deskripsi: "Isian yang meleleh gurih di setiap gigitan." },
 ];
 
 const isianList = [
-  { nama: "Savory Chicken", deskripsi: "Gurih, savory, dan kaya rasa dengan tekstur yang lembut." },
-  { nama: "Garlic Butter Corn", deskripsi: "Gurih dengan aroma bawang putih dan sedikit rasa manis dari jagung." },
-  { nama: "Tumis Jamur & Tempe", deskripsi: "Gurih dan umami dengan perpaduan rasa tempe, jamur, dan wortel." },
+  { nama: "Original", deskripsi: "Isi keju leleh saja, simpel dan creamy." },
+  { nama: "Savory Chicken", deskripsi: "Gurih dan familiar, cocok untuk semua kalangan." },
+  { nama: "Garlic Butter Corn", deskripsi: "Manis dan creamy dengan aroma bawang." },
+  { nama: "Tumis Jamur & Tempe", deskripsi: "Pilihan untuk yang suka rasa gurih khas lokal." },
 ];
 
 const sausList = [
-  { nama: "Creamy Ranch Sauce", deskripsi: "Creamy, gurih, segar, dan sedikit asam dari jeruk." },
-  { nama: "Hot Sauce", deskripsi: "Pedas, gurih, dengan sedikit sentuhan manis." },
+  { nama: "Creamy Ranch Sauce", deskripsi: "Gurih dan creamy, cocok buat yang suka rasa lembut." },
+  { nama: "Hot Sauce", deskripsi: "Pedas menyengat, buat yang suka sensasi lebih." },
 ];
 
 export default function Bahan() {
@@ -27,7 +28,7 @@ export default function Bahan() {
           Racikan di Balik Chiz-Pocketaro
         </h2>
         <p className="text-stone-600 text-center mb-10">
-          Talas, MOCAF, dan tapioka sebagai dasar adonan, dengan tiga pilihan
+          Talas, MOCAF, dan tapioka sebagai dasar adonan, dengan empat pilihan
           isian dan dua pilihan saus cocolan yang bisa kamu sesuaikan dengan
           selera.
         </p>
@@ -44,7 +45,7 @@ export default function Bahan() {
         <h3 className="font-display font-bold text-xl text-brand-dark mb-6 text-center">
           Pilihan isian
         </h3>
-        <div className="grid sm:grid-cols-3 gap-6 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {isianList.map((isian) => (
             <div key={isian.nama} className="bg-white border-2 border-ink rounded-2xl p-5 text-center">
               <h4 className="font-display font-bold text-brand-dark mb-2">{isian.nama}</h4>
