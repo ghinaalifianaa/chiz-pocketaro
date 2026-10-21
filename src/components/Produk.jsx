@@ -6,6 +6,16 @@ const produkList = [
     deskripsi: "1 pcs, pilih isian favoritmu, sudah termasuk 1 cup saus pilihan",
     harga: "Rp 10.000",
   },
+  {
+    nama: "Paket 2 pcs",
+    deskripsi: "Bebas pilih isian dan saus, hemat Rp2.000",
+    harga: "Rp 18.000",
+  },
+  {
+    nama: "Paket 3 pcs",
+    deskripsi: "Bebas pilih isian dan saus, hemat Rp4.000",
+    harga: "Rp 26.000",
+  },
 ];
 
 export default function Produk() {

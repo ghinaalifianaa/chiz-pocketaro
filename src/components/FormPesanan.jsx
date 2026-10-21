@@ -23,7 +23,21 @@ const LOKASI_AMBIL_OPTIONS = [
   { value: "svbarat", label: "SV Barat UGM" },
 ];
 
-const HARGA_SATUAN = 10000; // harga per pcs, ganti kalau harga berubah
+// Harga paket: jumlah pcs -> harga total. Ubah angkanya di sini kalau harga berubah.
+// Kalau pesan lebih dari 3 pcs, otomatis dihitung kombinasi paket termurah.
+const HARGA_PAKET = { 1: 10000, 2: 18000, 3: 26000 };
+const HARGA_SATUAN = HARGA_PAKET[1];
+
+function hitungHarga(totalPcs) {
+  const ukuran = Object.keys(HARGA_PAKET).map(Number);
+  const dp = [0];
+  for (let n = 1; n <= totalPcs; n++) {
+    dp[n] = Math.min(
+      ...ukuran.filter((u) => u <= n).map((u) => dp[n - u] + HARGA_PAKET[u])
+    );
+  }
+  return dp[totalPcs] || 0;
+}
 
 // Google Form buat nyimpen log pesanan otomatis ke spreadsheet (bukan buat diisi pelanggan)
 const GFORM_ACTION_URL =
@@ -96,8 +110,16 @@ export default function FormPesanan() {
     setItems((prev) => prev.filter((item) => item.id !== id));
   }
 
+  function hitungTotalPcs() {
+    return items.reduce((total, item) => total + (Math.max(0, Math.floor(Number(item.jumlah))) || 0), 0);
+  }
+
   function hitungTotal() {
-    return items.reduce((total, item) => total + (Number(item.jumlah) || 0) * HARGA_SATUAN, 0);
+    return hitungHarga(hitungTotalPcs());
+  }
+
+  function hitungHemat() {
+    return hitungTotalPcs() * HARGA_SATUAN - hitungTotal();
   }
 
   function buatLinkWhatsApp() {
@@ -178,6 +200,7 @@ export default function FormPesanan() {
       </p>
       <p className="text-stone-600 text-sm text-center mb-8">
         Mau pesan beberapa rasa atau saus sekaligus? Tambah pilihan di bawah.
+        Harga paket: 2 pcs Rp18.000, 3 pcs Rp26.000.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4 bg-white border-2 border-ink rounded-2xl p-6">
         <div>
@@ -218,9 +241,6 @@ export default function FormPesanan() {
                     onChange={(e) => updateItem(item.id, "jumlah", e.target.value)}
                     className={inputClass}
                   />
-                  <p className="text-xs text-brand font-bold mt-1">
-                    Subtotal: {formatRupiah((Number(item.jumlah) || 0) * HARGA_SATUAN)}
-                  </p>
                 </div>
                 <div>
                   <label className="block text-xs font-bold mb-1">Isian</label>
@@ -325,6 +345,11 @@ export default function FormPesanan() {
               className={inputClass}
             />
           </div>
+        )}
+        {hitungHemat() > 0 && (
+          <p className="text-xs text-brand font-bold text-center">
+            Hemat {formatRupiah(hitungHemat())} dengan harga paket!
+          </p>
         )}
         <div className="flex items-center justify-between border-t-2 border-ink pt-4">
           <span className="font-display font-bold text-brand-dark">Total</span>
