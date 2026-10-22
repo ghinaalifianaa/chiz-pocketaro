@@ -1,5 +1,5 @@
 // ====== UBAH 3 BARIS INI TIAP GANTI PERIODE PO ======
-export const PO_STATUS = "open"; // ganti jadi "closed" kalau PO sedang ditutup
+export const PO_STATUS = "closed"; // ganti jadi "closed" kalau PO sedang ditutup
 export const PO_MULAI = "19 Oktober 2026";
 export const PO_SELESAI = "22 Oktober 2026";
 // =====================================================
